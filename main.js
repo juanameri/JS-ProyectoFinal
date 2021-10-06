@@ -1,22 +1,26 @@
 const nombreDinamico = prompt("¿Cual es tu nombre?");
 console.log("¡Hola "+nombreDinamico+"! Bienvenid@ al Restaurante");
 
-const cantidadPersonas = Number(prompt("¿Cuantas personas van a ser?"));
-const fumadores = prompt("¿Alguien fuma?");
+function ubicacionEnSector(){
+    const cantidadPersonas = Number(prompt("¿Cuantas personas van a ser?"));
+    const fumadores = prompt("¿Alguien fuma?");
 
-if (fumadores == "si"){
-    if (cantidadPersonas >= 5){
-        console.log("Ok " + nombreDinamico + ", subí por la escalera de mano derecha y seras ubicado en la terraza");
-    } else {
-        console.log("Ok " + nombreDinamico + ", subí por la escalera de mano izquierda y seras ubicado en la terraza");
-    }
-} else if (fumadores == "no"){
-    if (cantidadPersonas < 5){
-        console.log("Ok " + nombreDinamico + ", avanza hacia mano derecha y seras ubicado por un asistente");
-    } else {
-        console.log("Ok " + nombreDinamico + ", avanza hacia mano izquierda y seras ubicado por un asistente");
+    if (fumadores == "si"){
+        if (cantidadPersonas >= 5){
+            return console.log("Ok " + nombreDinamico + ", subí por la escalera de mano derecha y seras ubicado en la terraza");
+        } else {
+            return console.log("Ok " + nombreDinamico + ", subí por la escalera de mano izquierda y seras ubicado en la terraza");
+        }
+    } else if (fumadores == "no"){
+        if (cantidadPersonas < 5){
+            return console.log("Ok " + nombreDinamico + ", avanza hacia mano derecha y seras ubicado por un asistente");
+        } else {
+            return console.log("Ok " + nombreDinamico + ", avanza hacia mano izquierda y seras ubicado por un asistente");
+        }
     }
 }
+
+ubicacionEnSector();
 
 class Comida {
     constructor(nombre, precio){
@@ -35,11 +39,10 @@ class Comida {
 }
 
 const comidas = [];
-//asi....
-const entrada1 = comidas.push(new Comida("picada", 50));
-const platoPrincipal1 = comidas.push(new Comida("milanesaConPure", 150));
-const postre1 = comidas.push(new Comida("flan", 40));
-// o asi...
+
+comidas.push(new Comida("picada", 50));
+comidas.push(new Comida("milanesaConPure", 150));
+comidas.push(new Comida("flan", 40));
 comidas.push(new Comida("helado", 35));
 comidas.push(new Comida("vitelTone", 60));
 comidas.push(new Comida("tallarinesConTuco", 100));
