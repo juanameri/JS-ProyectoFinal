@@ -10,6 +10,10 @@ function validarFormulario(e){
     console.log(formulario.children[3].value);
     console.log(formulario.children[5].value);
 
+    sessionStorage.setItem('nombreCliente', formulario.children[1].value);
+    sessionStorage.setItem('cantidadPersonas', formulario.children[3].value);
+    sessionStorage.setItem('fumadores', formulario.children[5].value);
+
     const nombreDinamico = formulario.children[1].value;
     const cantidadPersonas = formulario.children[3].value;
     const fumadores = formulario.children[5].value;
