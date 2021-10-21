@@ -1,4 +1,5 @@
 let mensajeUbicacion = document.getElementById("mensajeUbicacion");
+let menu = document.getElementById("menu");
 
 let formularioBienvenida = document.getElementById("formulario");
 formularioBienvenida.addEventListener("submit", validarFormulario);
@@ -20,17 +21,19 @@ function validarFormulario(e){
 
     if (fumadores == "si"){
         if (cantidadPersonas >= 5){
-            return mensajeUbicacion.innerHTML = "¡Hola "+nombreDinamico+"! Bienvenid@ al Restaurante, subí por la escalera de mano derecha y seras ubicado en la terraza";
+            return mensajeUbicacion.innerHTML = `¡Hola ${nombreDinamico}! Bienvenid@ al Restaurante, subí por la escalera de mano derecha y seras ubicado en la terraza <h2>Entradas</h2><ul><li>Picada</li><li>Vitel Tone</li><li>Ensalada Cesar</li></ul><h2>Plato Principal</h2><ul><li>Milanesa Con Pure</li><li>Tallarines Con Tuco</li><li>Sopa De Calabaza</li></ul><h2>Postre</h2><ul><li>Helado</li><li>Tarta</li><li>Flan</li></ul>`;
         } else {
-            return mensajeUbicacion.innerHTML = "¡Hola "+nombreDinamico+"! Bienvenid@ al Restaurante, subí por la escalera de mano izquierda y seras ubicado en la terraza";
+            return mensajeUbicacion.innerHTML = `¡Hola ${nombreDinamico}! Bienvenid@ al Restaurante, subí por la escalera de mano izquierda y seras ubicado en la terraza <h2>Entradas</h2><ul><li>Picada</li><li>Vitel Tone</li><li>Ensalada Cesar</li></ul><h2>Plato Principal</h2><ul><li>Milanesa Con Pure</li><li>Tallarines Con Tuco</li><li>Sopa De Calabaza</li></ul><h2>Postre</h2><ul><li>Helado</li><li>Tarta</li><li>Flan</li></ul>`;;
         }
     } else if (fumadores == "no"){
         if (cantidadPersonas < 5){
-            return mensajeUbicacion.innerHTML = "¡Hola "+nombreDinamico+"! Bienvenid@ al Restaurante, avanza hacia mano derecha y seras ubicado por un asistente";
+            return mensajeUbicacion.innerHTML = `¡Hola ${nombreDinamico}! Bienvenid@ al Restaurante, avanza hacia mano derecha y seras ubicado en la terraza <h2>Entradas</h2><ul><li>Picada</li><li>Vitel Tone</li><li>Ensalada Cesar</li></ul><h2>Plato Principal</h2><ul><li>Milanesa Con Pure</li><li>Tallarines Con Tuco</li><li>Sopa De Calabaza</li></ul><h2>Postre</h2><ul><li>Helado</li><li>Tarta</li><li>Flan</li></ul>`;
         } else {
-            return mensajeUbicacion.innerHTML = "¡Hola "+nombreDinamico+"! Bienvenid@ al Restaurante, avanza hacia mano izquierda y seras ubicado por un asistente";
+            return mensajeUbicacion.innerHTML = `¡Hola ${nombreDinamico}! Bienvenid@ al Restaurante, avanza hacia mano izquierda y seras ubicado en la terraza <h2>Entradas</h2><ul><li>Picada</li><li>Vitel Tone</li><li>Ensalada Cesar</li></ul><h2>Plato Principal</h2><ul><li>Milanesa Con Pure</li><li>Tallarines Con Tuco</li><li>Sopa De Calabaza</li></ul><h2>Postre</h2><ul><li>Helado</li><li>Tarta</li><li>Flan</li></ul>`;
         }
     }
+
+   // menu.innerHTML = `<h2>Entradas</h2><ul><li>Picada</li><li>Vitel Tone</li><li>Ensalada Cesar</li></ul><h2>Plato Principal</h2><ul><li>Milanesa Con Pure</li><li>Tallarines Con Tuco</li><li>Sopa De Calabaza</li></ul><h2>Postre</h2><ul><li>Helado</li><li>Tarta</li><li>Flan</li></ul>`
 }
 
 class Comida {
