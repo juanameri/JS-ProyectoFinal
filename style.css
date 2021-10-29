@@ -32,6 +32,8 @@
     max-width: 100%;
   }
   
+  
+
   #boton {
     width: 90%;
     margin: 15px;
@@ -49,6 +51,11 @@
     cursor: pointer;
     color: rgb(247, 175, 19);
   }
+  #botonFinalizar {
+      margin-left: 35%;
+      margin-right: 35%;
+      text-align: center;
+    }
 
   h1 {
     color: #6b1752;

@@ -36,6 +36,15 @@ function validarFormulario(e){
    // menu.innerHTML = `<h2>Entradas</h2><ul><li>Picada</li><li>Vitel Tone</li><li>Ensalada Cesar</li></ul><h2>Plato Principal</h2><ul><li>Milanesa Con Pure</li><li>Tallarines Con Tuco</li><li>Sopa De Calabaza</li></ul><h2>Postre</h2><ul><li>Helado</li><li>Tarta</li><li>Flan</li></ul>`
 }
 
+$('#botonFinalizar').append('<button id="boton" id="botonfinalizar">Finalizar orden</button>');
+$("#botonFinalizar").click(function () {
+    $('#mensajeDespedida').append("<h2>¡Adios y gracias por elegirnos!</h2>");
+    $("#mensajeUbicacion").slideUp("slow");
+    $("#formulario").slideUp("slow");
+    console.log("Respuesta a un click");
+});
+
+
 class Comida {
     constructor(nombre, precio){
         this.nombre = nombre.toUpperCase();
@@ -78,3 +87,15 @@ function precioTotal (entrada, platoPrincipal, postre){
     sumaTotal = entrada + platoPrincipal + postre;
     return console.log("El precio total de su pedido es $"+ sumaTotal);
 }
+
+const URLGET   = "https://jsonplaceholder.typicode.com/posts"
+const infoPost =  { nombre: "Ana", mesa: "24" }
+
+$("#desafioAJAX").prepend('<button id="btnAJAX">POST</button>');
+$("#btnAJAX").click(() => { 
+    $.post(URLGET, infoPost ,(respuesta, estado) => {
+        if(estado === "success"){
+            $("#desafioAJAX").prepend(`${respuesta.nombre} ocupa la mensa ${respuesta.mesa}`);
+        }  
+    });
+});
